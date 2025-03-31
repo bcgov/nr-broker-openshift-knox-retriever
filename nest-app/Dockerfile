@@ -1,5 +1,5 @@
 # Use a base image with Node.js installed
-FROM node:20 AS builder
+FROM node:22 AS builder
 
 RUN npm i -g @nestjs/cli
 
@@ -17,10 +17,11 @@ COPY . ./
 RUN npm run build
 
 # Use a minimal base image for the production environment
-FROM node:18
+FROM node:22
 
 # Set the environment variable for Vault address
-ENV VAULT_ADDR="https://vault-iit-test.apps.silver.devops.gov.bc.ca"
+ARG VAULT_ADDR="https://vault-iit-test.apps.silver.devops.gov.bc.ca"
+ENV VAULT_ADDR=$VAULT_ADDR
 ARG ENVCONSUL_VERSION=0.13.1
 
 # Install envconsul to unwrap the token and fetch secrets from Vault during runtime

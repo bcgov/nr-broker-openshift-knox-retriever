@@ -9,7 +9,7 @@ data:
   intention.json: |-
     {
       "event": {
-        "provider": "image-test-demo",
+        "provider": "provision-secret-demo",
         "reason": "Job triggered",
         "url": "JOB_URL"
       },
@@ -19,13 +19,13 @@ data:
           "id": "provision",
           "provision": ["approle/secret-id"],
           "service": {
-            "name": "app-spar",
+            "name": "spar-war",
             "project": "spar",
             "environment": "test"
           }
         }
       ],
       "user": {
-        "id": "gruan@idir"
+        "name": "gruan@azureidir"
       }
     }

@@ -1,16 +1,16 @@
 global:
-  name: "vault-demo"
+  name: "knox-retriever-demo"
   namespace: "c2053d"
   short-env: "dev"
 
 server:
   image:
-    registry: "artifacts.developer.gov.bc.ca"
-    context: "/cc20-gen-docker-local"
+    registry: "ghcr.io/bcgov"
+    context: "/nr-broker-openshift-knox-retriever"
   route:
-      internal:
-        enabled: true
-        host: nestapp-test.apps.silver.devops.gov.bc.ca
+    internal:
+      enabled: true
+      host: nestapp-test.apps.silver.devops.gov.bc.ca
 vault:
   secret: "vault-secret"
   storage:

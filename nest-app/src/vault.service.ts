@@ -4,7 +4,7 @@ import * as Vault from 'node-vault';
 @Injectable()
 export class VaultService {
   private client: any;
-  secret_path = 'apps/test/spar/app-spar';
+  secret_path = 'apps/test/spar/spar-war';
   constructor() {
     this.client = Vault({ token: process.env.VAULT_TOKEN });
   }

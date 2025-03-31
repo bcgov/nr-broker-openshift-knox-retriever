@@ -22,7 +22,7 @@ data:
 
     secret {
       no_prefix = true
-      path = "apps/test/spar/app-spar/db_proxy_write_read"
+      path = "apps/test/spar/spar-war/db_proxy_write_read"
     }
 
     exec {

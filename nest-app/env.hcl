@@ -13,7 +13,7 @@ vault {
 
 secret {
     no_prefix = true
-    path = "apps/test/spar/app-spar/db_proxy_read_only"
+    path = "apps/test/spar/spar-war/db_proxy_write_read"
 }
 
 exec {
