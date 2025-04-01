@@ -4,9 +4,14 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'nest-app/**' # Trigger only when files in the ./nest-app folder change
+
   pull_request:
     branches:
       - main
+    paths:
+      - 'nest-app/**' # Trigger only when files in the ./nest-app folder change
 
 jobs:
   build-and-push:

@@ -4,11 +4,17 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - 'generate-token/**' # Trigger only when files in the ./generate-token folder change
+
   push:
     branches:
       - main
     tags:
       - "v*"
+    paths:
+      - 'generate-token/**' # Trigger only when files in the ./generate-token folder change
+
 env:
   IMAGE_NAME: ghcr.io/${{ github.repository }}/nr-broker-openshift-knox-retriever
 
