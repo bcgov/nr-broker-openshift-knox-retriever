@@ -57,7 +57,7 @@ spec:
             name: vault-secret
             key: token
       - name: EVENT_URL
-        value: "https://console.apps.silver.devops.gov.bc.ca/k8s/ns/c2053d-dev/pods/vault-demo-init"
+        value: "https://console.apps.silver.devops.gov.bc.ca/k8s/ns/c2053d-dev/pods/{{ .Values.global.name }}-init"
     command:
       - /bin/sh
       - '-c'

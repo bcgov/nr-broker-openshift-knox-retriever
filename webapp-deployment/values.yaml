@@ -5,8 +5,8 @@ global:
 
 server:
   image:
-    registry: "ghcr.io/bcgov"
-    context: "/nr-broker-openshift-knox-retriever"
+    registry: "ghcr.io/bcgov/"
+    context: "nr-broker-openshift-knox-retriever"
   route:
     internal:
       enabled: true

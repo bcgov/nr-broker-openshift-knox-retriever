@@ -31,6 +31,9 @@ image for nest-app: ghcr.io/bcgov/nr-broker-openshift-knox-retriever/nest-app:te
 # Helm chart deployment
 use Helm Chart to install/uninstall pod in openshift for your application
 ```
-helm install vault-demo webapp-deployment/
-helm uninstall vault-demo
+helm install knox-retriever-demo webapp-deployment/
+helm uninstall knox-retriever-demo
 ```
+
+After deployment into OpenShift c2053d-dev, the nest-app is up running at: https://nestapp-test.apps.silver.devops.gov.bc.ca/
+It shows secrets that retrieved from Vault Test under path: apps/test/spar/spar-war/db_proxy_write_read
