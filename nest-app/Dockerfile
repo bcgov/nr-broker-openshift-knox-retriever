@@ -20,7 +20,7 @@ RUN npm run build
 FROM node:22
 
 # Set the environment variable for Vault address
-ARG VAULT_ADDR="https://vault-iit-test.apps.silver.devops.gov.bc.ca"
+ARG VAULT_ADDR="https://vault-iit.apps.silver.devops.gov.bc.ca"
 ENV VAULT_ADDR=$VAULT_ADDR
 ARG ENVCONSUL_VERSION=0.13.1
 

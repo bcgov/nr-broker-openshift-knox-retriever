@@ -1,5 +1,5 @@
 vault {
-  address = "https://vault-iit-test.apps.silver.devops.gov.bc.ca"
+  address = "https://vault-iit.apps.silver.devops.gov.bc.ca"
   renew_token = true
   vault_agent_token_file = "/config/token/token.txt"
   unwrap_token = true
@@ -13,7 +13,7 @@ vault {
 
 secret {
     no_prefix = true
-    path = "apps/test/spar/spar-war/db_proxy_write_read"
+    path = "apps/dev/nodejs-sample/nodejs-sample/proxy-account-ready-only"
 }
 
 exec {
