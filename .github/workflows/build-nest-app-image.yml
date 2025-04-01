@@ -12,7 +12,6 @@ jobs:
   build-and-push:
     name: Build and Push Docker Image
     runs-on: ubuntu-latest
-    environment: test # Use the 'test' environment for secrets
 
     env:
       IMAGE_NAME: ghcr.io/${{ github.repository }}/nest-app
@@ -41,7 +40,7 @@ jobs:
           context: ./nest-app # Path to the Dockerfile
           push: true # Push the image to GitHub Container Registry
           tags: |
-            ${{ env.IMAGE_NAME }}:test
+            ${{ env.IMAGE_NAME }}:latest
           build-args: |
-            VAULT_ADDR=${{ secrets.VAULT_ADDR }}
+            VAULT_ADDR=${{ vars.VAULT_ADDR }}
             ENVCONSUL_VERSION=0.13.1

@@ -1,8 +1,8 @@
 FROM docker.io/library/alpine
 RUN apk --update add jq
 RUN apk --update add curl
-ARG BROKER_URL="https://nr-broker-test.apps.silver.devops.gov.bc.ca"
-ARG VAULT_ADDR="https://vault-iit-test.apps.silver.devops.gov.bc.ca"
+ARG BROKER_URL="https://nr-broker.apps.silver.devops.gov.bc.ca"
+ARG VAULT_ADDR="https://vault-iit.apps.silver.devops.gov.bc.ca"
 ENV BROKER_URL=$BROKER_URL
 ENV VAULT_ADDR=$VAULT_ADDR
 ENV BROKER_JWT="JWT"

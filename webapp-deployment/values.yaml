@@ -5,7 +5,7 @@ global:
 
 server:
   image:
-    registry: "ghcr.io/bcgov/"
+    registry: "artifacts.developer.gov.bc.ca/github-docker-remote/"
     context: "nr-broker-openshift-knox-retriever"
   route:
     internal:

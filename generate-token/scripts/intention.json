@@ -10,9 +10,9 @@
         "id": "provision",
         "provision": ["approle/secret-id"],
         "service": {
-          "name": "spar-war",
-          "project": "spar",
-          "environment": "test"
+          "name": "nodejs-sample",
+          "project": "nodejs-sample",
+          "environment": "development"
         }
       }
     ],
