@@ -20,4 +20,4 @@ VOLUME /broker/output
 WORKDIR /broker
 # Set the entrypoint to the script with CMD arguments
 ENTRYPOINT ["./get-vault-token.sh"]
-CMD [BROKER_URL, VAULT_ADDR, BROKER_JWT,ROLE_ID,PROVISION_NAME,EVENT_URL,USER]
+CMD [BROKER_JWT,ROLE_ID,PROVISION_NAME,EVENT_URL,USER]
