@@ -1,5 +1,5 @@
 vault {
-  address = "https://vault-iit.apps.silver.devops.gov.bc.ca"
+  address = "https://knox.io.nrs.gov.bc.ca"
   renew_token = true
   vault_agent_token_file = "/config/token/token.txt"
   unwrap_token = true

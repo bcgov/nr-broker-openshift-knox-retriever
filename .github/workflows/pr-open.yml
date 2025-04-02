@@ -39,7 +39,7 @@ jobs:
           context: ./generate-token
           push: true
           tags: |
-            ${{ env.REGISTRY }}/${{ github.repository }}/nr-broker-openshift-knox-retriever:${{ github.event.number }}-backend
+            ${{ env.REGISTRY }}/${{ github.repository }}/nr-broker-openshift-knox-retriever:${{ github.event.number }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
@@ -52,7 +52,7 @@ jobs:
           context: ./nest-app 
           push: true
           tags: |
-            ${{ env.REGISTRY }}/${{ github.repository }}/nest-app:${{ github.event.number }}-frontend
+            ${{ env.REGISTRY }}/${{ github.repository }}/nest-app:${{ github.event.number }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
