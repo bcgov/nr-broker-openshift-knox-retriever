@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+BROKER_URL=${BROKER_URL}
+VAULT_ADDR=${VAULT_ADDR}
 BROKER_JWT=${1}
 ROLE_ID=${2}
 PROVISION_NAME=${3}
@@ -14,13 +16,14 @@ if [ -f $filename ]; then
 fi
 
 echo "===> Intention open"
+
 # Open intention
 RESPONSE=$(curl -s -X POST $BROKER_URL/v1/intention/open \
     -H 'Content-Type: application/json' \
     -H "Authorization: Bearer $BROKER_JWT" \
     -d @<(cat ./config/intention.json | \
         jq ".event.url=\"$EVENT_URL\" | \
-            .user.id=\"$USER\" \
+            .user.name=\"$USER\" \
         " \
     ))
 echo "$BROKER_URL/v1/intention/open:"
