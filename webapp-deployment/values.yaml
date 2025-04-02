@@ -16,3 +16,6 @@ vault:
   storage:
     classname: "netapp-file-backup"
     backup: "500Mi"
+
+app:
+  version: "1.0.0"

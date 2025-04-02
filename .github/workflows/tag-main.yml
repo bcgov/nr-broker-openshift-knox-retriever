@@ -57,7 +57,6 @@ jobs:
           push: true
           tags: |
             ${{ env.REGISTRY }}/${{ github.repository }}/nr-broker-openshift-knox-retriever:${{ github.ref_name }}
-            ${{ env.REGISTRY }}/${{ github.repository }}/nr-broker-openshift-knox-retriever:latest
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           build-args: |
@@ -71,7 +70,6 @@ jobs:
           push: true 
           tags: |
             ${{ env.REGISTRY }}/${{ github.repository }}/nest-app:${{ github.ref_name }}
-            ${{ env.REGISTRY }}/${{ github.repository }}/nest-app:latest
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           build-args: |
