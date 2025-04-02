@@ -6,7 +6,7 @@ global:
 server:
   image:
     registry: "artifacts.developer.gov.bc.ca/github-docker-remote/"
-    context: "nr-broker-openshift-knox-retriever"
+    context: "bcgov/nr-broker-openshift-knox-retriever"
   route:
     internal:
       enabled: true
@@ -18,4 +18,4 @@ vault:
     backup: "500Mi"
 
 app:
-  version: "1.0.0"
+  version: "1.0.1"
