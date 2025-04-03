@@ -7,12 +7,12 @@ set secrets in the project of the namespace to hold role id and broker JWT
 # Images for containers
 initContainer- get vault wrap access token
 ```
-image retrieve secrets in prod: ghcr.io/bcgov/nr-broker-openshift-knox-retriever/nr-broker-openshift-knox-retriever:latest
+image retrieve secrets in prod: ghcr.io/bcgov/nr-broker-openshift-knox-retriever/nr-broker-openshift-knox-retriever:v1.0.1
 
 ```
-Container- sample NestJS application use envconsul to access secrets in vault configured for spar-war service
+Container- sample NestJS application use envconsul to access secrets in vault configured for nodejs-sample service
 ```
-image for nest-app: ghcr.io/bcgov/nr-broker-openshift-knox-retriever/nest-app:latest
+image for nest-app: ghcr.io/bcgov/nr-broker-openshift-knox-retriever/nest-app:v1.0.1
 ```
 # How to re-use the nr-broker-openshift-knox-retriever image for existing application in OpenShift
 
@@ -34,4 +34,4 @@ helm uninstall knox-retriever-demo
 ```
 
 After deployment into OpenShift c2053d-dev, the nest-app is up running at: https://nestapp-test.apps.silver.devops.gov.bc.ca/
-It shows secrets that retrieved from Vault Test under path: apps/dev/nodejs-sample/nodejs-sample/proxy-account-ready-only
+It shows secrets that retrieved from Vault PROD under path: apps/dev/nodejs-sample/nodejs-sample/proxy-account-ready-only
