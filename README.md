@@ -35,5 +35,5 @@ helm install knox-retriever-demo webapp-deployment/
 helm uninstall knox-retriever-demo
 ```
 
-After deployment into OpenShift c2053d-dev, the nest-app is up running at: https://nestapp-test.apps.silver.devops.gov.bc.ca/
+After deployment into OpenShift c2053d-dev, the nest-app is up running 
 It shows secrets that retrieved from Vault PROD under path: apps/dev/nodejs-sample/nodejs-sample/proxy-account-ready-only
